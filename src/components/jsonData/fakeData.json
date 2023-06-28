@@ -1,0 +1,39 @@
+{
+  "formField": [
+    {
+      "type": "textarea",
+      "name": "first name",
+      "label": "First Name",
+      "initValue": "",
+      "placeholder": "First Name"
+    },
+    {
+      "type": "text",
+      "name": "last name",
+      "label": "Last Name",
+      "initValue": "",
+      "placeholder": "Last Name"
+    },
+    {
+      "type": "select",
+      "name": "age",
+      "label": "Age",
+      "option": {
+        "options": [
+          { "label": "ten", "value": 10, "selected": true },
+          { "label": "twenty", "value": 20 },
+          { "label": "thirty", "value": 30 },
+          { "label": "fourty", "value": 40 }
+        ]
+      },
+      "placeholder": "Age"
+    },
+    {
+      "type": "checkbox",
+      "name": "Agree",
+      "label": "Agree",
+      "initValue": false,
+      "placeholder": "Agree"
+    }
+  ]
+}

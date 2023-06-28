@@ -8,11 +8,11 @@ import RadioButtons from "./RadioButtons";
 import CustomCheckbox from "./Checkbox";
 
 interface FormikControlProps {
-  type: string | undefined;
-  label: string | undefined;
-  name: string | undefined;
-  options?: any;
-  Defaultselectedname?: any;
+  type: string;
+  label: string;
+  name: string;
+  options?: any[];
+  defaultSelectedName?: any;
   error: boolean;
   helperText: string;
   // Other props...

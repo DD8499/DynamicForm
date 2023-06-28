@@ -14,7 +14,6 @@ interface CustomInputProps {
 
 const CustomInput: React.FC<CustomInputProps> = (props) => {
   const { label, name, type, error, helperText, ...rest } = props;
-  // console.log(formik?.errors?.);
   return (
     <Grid>
       <InputLabel htmlFor={name}>{label}</InputLabel>

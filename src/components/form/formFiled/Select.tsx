@@ -10,45 +10,34 @@ import {
   MenuItem,
 } from "@mui/material";
 
+interface Option {
+  value: string;
+  label: string;
+  selected?: boolean;
+}
+
 interface Props {
-  label: string | undefined;
-  name: string | undefined;
-  options?: any;
-  Defaultselectedname?: any;
+  label: string;
+  name: string;
+  options?: Option[];
   error: boolean;
   helperText: string;
 }
 
-const CustomSelect = (props: Props) => {
-  const {
-    label,
-    name,
-    options,
-    Defaultselectedname,
-    error,
-    helperText,
-    ...rest
-  } = props;
+const CustomSelect: React.FC<Props> = (props) => {
+  const { label, name, options, error, helperText, ...rest } = props;
   return (
-    <Grid>
-      <InputLabel>{label}</InputLabel>
-      <FormControl sx={{ m: 1, width: 300, mb: 2 }}>
-        <InputLabel htmlFor={name}>{label}</InputLabel>
-        <Field
-          as={Select}
-          label={label}
-          id={name}
-          name={name}
-          {...rest}
-          error={error}
-        >
-          {options?.map((item: any, index: number) => (
-            <MenuItem key={index} value={item?.value}>
-              {item?.label}
+    <Grid item xs={12}>
+      <InputLabel htmlFor={name}>{label}</InputLabel>
+      <FormControl sx={{ m: 1, width: 300, mb: 2 }} error={error}>
+        <Field as={Select} id={name} name={name} {...rest}>
+          {options?.map((item: Option, index: number) => (
+            <MenuItem key={index} value={item.value}>
+              {item.label}
             </MenuItem>
           ))}
         </Field>
-        {helperText && <FormHelperText error>{helperText}</FormHelperText>}
+        {helperText && <FormHelperText>{helperText}</FormHelperText>}
       </FormControl>
     </Grid>
   );

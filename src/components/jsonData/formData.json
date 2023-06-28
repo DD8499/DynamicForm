@@ -5,54 +5,21 @@
       "name": "first name",
       "label": "First Name",
       "initValue": "",
-      "placeholder": "First Name",
-      "control": "input"
+      "placeholder": "First Name"
     },
     {
       "type": "text",
       "name": "last name",
       "label": "Last Name",
       "initValue": "",
-      "placeholder": "Last Name",
-      "control": "input"
+      "placeholder": "Last Name"
     },
     {
-      "type": "select",
-      "name": "age",
-      "label": "Age",
-      "option": {
-        "options": [
-          { "label": "ten", "value": 10, "selected": true },
-          { "label": "twenty", "value": 20 },
-          { "label": "thirty", "value": 30 },
-          { "label": "fourty", "value": 40 }
-        ]
-      },
-      "placeholder": "Email",
-      "control": "input"
-    },
-    {
-      "type": "select",
-      "name": "number",
-      "label": "Number",
-      "option": {
-        "options": [
-          { "label": "ten", "value": 10 },
-          { "label": "twenty", "value": 20 },
-          { "label": "thirty", "value": 30 },
-          { "label": "fourty", "value": 40 }
-        ]
-      },
-      "placeholder": "Email",
-      "control": "input"
-    },
-    {
-      "type": "checkbox",
-      "name": "Agree",
-      "label": "Agree",
-      "initValue": false,
-      "placeholder": "Agree",
-      "control": "input"
+      "type": "text",
+      "name": "email",
+      "label": "Email",
+      "initValue": "",
+      "placeholder": "Email"
     }
   ]
 }
