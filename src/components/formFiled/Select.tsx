@@ -1,6 +1,5 @@
 import React from "react";
 import { Field, ErrorMessage } from "formik";
-import TextError from "./TextError";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import {
   FormControl,
@@ -11,17 +10,17 @@ import {
 } from "@mui/material";
 
 interface Option {
-  value: string;
-  label: string;
+  value: any;
+  label: any;
   selected?: boolean;
 }
 
 interface Props {
   label: string;
   name: string;
-  options?: Option[];
-  error: boolean;
-  helperText: string;
+  options?: any;
+  error: boolean | undefined;
+  helperText: any;
 }
 
 const CustomSelect: React.FC<Props> = (props) => {
@@ -31,7 +30,7 @@ const CustomSelect: React.FC<Props> = (props) => {
       <InputLabel htmlFor={name}>{label}</InputLabel>
       <FormControl sx={{ m: 1, width: 300, mb: 2 }} error={error}>
         <Field as={Select} id={name} name={name} {...rest}>
-          {options?.map((item: Option, index: number) => (
+          {options?.map((item: any, index: number) => (
             <MenuItem key={index} value={item.value}>
               {item.label}
             </MenuItem>

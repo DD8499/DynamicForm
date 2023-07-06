@@ -4,8 +4,8 @@ import { FormControl, Grid, InputLabel, TextField } from "@mui/material";
 interface Props {
   label: string | undefined;
   name: string | undefined;
-  error: boolean | undefined;
-  helperText: string | undefined;
+  error: boolean | undefined | undefined;
+  helperText: any | undefined;
 }
 
 const Textarea = (props: Props) => {

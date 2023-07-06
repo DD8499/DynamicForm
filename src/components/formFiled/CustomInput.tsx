@@ -2,14 +2,13 @@ import React from "react";
 import { Field, ErrorMessage } from "formik";
 import Grid from "@mui/material/Grid";
 import { TextField, InputLabel, FormControl } from "@mui/material";
-import "../../../App.css";
 
 interface CustomInputProps {
   label?: string;
   name?: string;
   type?: string;
-  error: boolean;
-  helperText: string;
+  error: boolean | undefined;
+  helperText: any;
 }
 
 const CustomInput: React.FC<CustomInputProps> = (props) => {

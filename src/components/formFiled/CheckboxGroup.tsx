@@ -1,6 +1,5 @@
 import React from "react";
 import { Field, ErrorMessage } from "formik";
-import TextError from "./TextError";
 
 interface Props {
   label: string | undefined;
@@ -32,7 +31,6 @@ const CheckboxGroup = (props: Props) => {
           });
         }}
       </Field>
-      <ErrorMessage component={TextError} name={name} />
     </div>
   );
 };

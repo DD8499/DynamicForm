@@ -7,8 +7,8 @@ import Grid from "@mui/material/Grid";
 interface Props {
   label: string;
   name: string;
-  error: boolean;
-  helperText: string;
+  error: boolean | undefined;
+  helperText: any;
 }
 
 const CustomCheckbox: React.FC<Props> = (props) => {

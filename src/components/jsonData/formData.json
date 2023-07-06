@@ -1,25 +1,18 @@
 {
   "formField": [
     {
-      "type": "textarea",
-      "name": "first name",
-      "label": "First Name",
-      "initValue": "",
-      "placeholder": "First Name"
-    },
-    {
-      "type": "text",
-      "name": "last name",
-      "label": "Last Name",
-      "initValue": "",
-      "placeholder": "Last Name"
-    },
-    {
-      "type": "text",
+      "type": "email",
       "name": "email",
       "label": "Email",
       "initValue": "",
       "placeholder": "Email"
+    },
+    {
+      "type": "text",
+      "name": "password",
+      "label": "Password",
+      "initValue": "",
+      "placeholder": "Password"
     }
   ]
 }

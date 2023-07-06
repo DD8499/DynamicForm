@@ -11,32 +11,31 @@ interface FormikControlProps {
   type: string;
   label: string;
   name: string;
-  options?: any[];
+  options?: any;
   defaultSelectedName?: any;
-  error: boolean;
-  helperText: string;
+  error: boolean | undefined;
+  helperText: any;
   // Other props...
 }
 
 const FormikControl: React.FC<FormikControlProps> = (props) => {
-  const { type, ...rest } = props;
-
-  switch (type) {
+  switch (props?.type) {
     case "email":
+      return <Input {...props} />;
     case "text":
-      return <Input {...rest} />;
+      return <Input {...props} />;
     case "textarea":
-      return <Textarea {...rest} />;
+      return <Textarea {...props} />;
     case "select":
-      return <CustomSelect {...rest} />;
+      return <CustomSelect {...props} />;
     case "fileupload":
-      return <FileUpload {...rest} />;
+      return <FileUpload {...props} />;
     case "radio":
-      return <RadioButtons {...rest} />;
+      return <RadioButtons {...props} />;
     case "checkboxGroup":
-      return <CheckboxGroup {...rest} />;
+      return <CheckboxGroup {...props} />;
     case "checkbox":
-      return <CustomCheckbox {...rest} />;
+      return <CustomCheckbox {...props} />;
     default:
       return null;
   }

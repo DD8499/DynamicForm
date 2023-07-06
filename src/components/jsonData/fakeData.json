@@ -1,7 +1,7 @@
 {
   "formField": [
     {
-      "type": "textarea",
+      "type": "text",
       "name": "first name",
       "label": "First Name",
       "initValue": "",
@@ -15,24 +15,64 @@
       "placeholder": "Last Name"
     },
     {
+      "type": "email",
+      "name": "email",
+      "label": "Email",
+      "initValue": "",
+      "placeholder": "Email"
+    },
+    {
+      "type": "text",
+      "name": "password",
+      "label": "Password",
+      "initValue": "",
+      "placeholder": "Password"
+    },
+    {
       "type": "select",
       "name": "age",
       "label": "Age",
       "option": {
         "options": [
-          { "label": "ten", "value": 10, "selected": true },
-          { "label": "twenty", "value": 20 },
-          { "label": "thirty", "value": 30 },
-          { "label": "fourty", "value": 40 }
+          { "label": "Ten", "value": 10, "selected": true },
+          { "label": "Twenty", "value": 20 },
+          { "label": "Thirty", "value": 30 },
+          { "label": "Fourty", "value": 40 }
         ]
       },
       "placeholder": "Age"
+    },
+
+    {
+      "type": "select",
+      "name": "hobby",
+      "label": "Hobby",
+      "option": {
+        "options": [
+          { "label": "Cricket", "value": "cricket" },
+          { "label": "Hockey", "value": "hockey", "selected": true },
+          { "label": "Football", "value": "football" }
+        ]
+      },
+      "placeholder": "Hobby"
+    },
+    {
+      "type": "radio",
+      "name": "gender",
+      "label": "Gender",
+      "option": {
+        "options": [
+          { "label": "Male", "value": "Male", "selected": true },
+          { "label": "Female", "value": "Female" }
+        ]
+      },
+      "placeholder": "Gender"
     },
     {
       "type": "checkbox",
       "name": "Agree",
       "label": "Agree",
-      "initValue": false,
+      "initValue": true,
       "placeholder": "Agree"
     }
   ]
