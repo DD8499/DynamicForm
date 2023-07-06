@@ -29,8 +29,9 @@ const SignupForm = () => {
   }
 
   const validationSchema = Yup.object(validation);
-  const onSubmit = (values: any) => {
+  const onSubmit = (values: any, { resetForm }: any) => {
     console.log("Form data", values);
+    resetForm();
   };
   const navigate = useNavigate();
   return (

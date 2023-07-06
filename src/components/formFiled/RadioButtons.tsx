@@ -3,6 +3,7 @@ import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControl from "@mui/material/FormControl";
 import FormControlLabel from "@mui/material/FormControlLabel";
+import { InputLabel } from "@mui/material";
 
 interface Option {
   value: string;
@@ -26,8 +27,13 @@ const RadioButtons = (props: Props) => {
     helpers.setValue(event.target.value);
   };
   return (
-    <div>
-      <label>{label}</label>
+    <div style={{ display: "flex", justifyContent: "flex-start", gap: "30px" }}>
+      <InputLabel
+        style={{ display: "flex", alignItems: "center" }}
+        htmlFor={name}
+      >
+        {label}
+      </InputLabel>
       <FormControl error={error}>
         <RadioGroup {...field} id={name} onChange={handleChange} {...rest}>
           {options?.map((option: Option) => (
